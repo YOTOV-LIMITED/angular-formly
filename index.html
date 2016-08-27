@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Angular-formly by YOTOV-LIMITED</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Angular-formly</h1>
+      <h2 class="project-tagline">JavaScript powered forms for AngularJS</h2>
+      <a href="https://github.com/YOTOV-LIMITED/angular-formly" class="btn">View on GitHub</a>
+      <a href="https://github.com/YOTOV-LIMITED/angular-formly/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/YOTOV-LIMITED/angular-formly/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <p><img src="https://raw.githubusercontent.com/formly-js/angular-formly/master/other/logo/angular-formly-logo-64px.png" alt="angular-formly logo" title="angular-formly" align="right" width="64" height="64"></p>
+
+<h2>
+<a id="angular-formly" class="anchor" href="#angular-formly" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="http://docs.angular-formly.com">angular-formly</a>
+</h2>
+
+<p><a href="https://github.com/formly-js/angular-formly/issues/638">THIS PROJECT NEEDS A MAINTAINER</a></p>
+
+<p>Status:
+<a href="https://www.npmjs.org/package/angular-formly"><img src="https://img.shields.io/npm/v/angular-formly.svg?style=flat-square" alt="npm version"></a>
+<a href="http://npm-stat.com/charts.html?package=angular-formly&amp;from=2015-01-01"><img src="https://img.shields.io/npm/dm/angular-formly.svg?style=flat-square" alt="npm downloads"></a>
+<a href="https://travis-ci.org/formly-js/angular-formly"><img src="https://img.shields.io/travis/formly-js/angular-formly.svg?style=flat-square" alt="Build Status"></a>
+<a href="https://codecov.io/github/formly-js/angular-formly"><img src="https://img.shields.io/codecov/c/github/formly-js/angular-formly.svg?style=flat-square" alt="Code Coverage"></a></p>
+
+<p>Links:
+<a href="http://docs.angular-formly.com"><img src="https://img.shields.io/badge/API-Docs-red.svg?style=flat-square" alt="Documentation"></a>
+<a href="http://angular-formly.com"><img src="https://img.shields.io/badge/formly-examples-green.svg?style=flat-square" alt="Examples"></a>
+<a href="https://egghead.io/playlists/advanced-angular-forms-with-angular-formly"><img src="https://img.shields.io/badge/egghead-lessons-blue.svg?style=flat-square" alt="egghead.io lessons"></a>
+<a href="https://gitter.im/formly-js/angular-formly?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Gitter"></a>
+<a href="https://github.com/formly-js/angular-formly/releases"><img src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square" alt="semantic-release"></a>
+<a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/prs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome"></a></p>
+
+<p>angular-formly is an AngularJS module which has a directive to help customize and render JavaScript/JSON configured forms.
+The <code>formly-form</code> directive and the <code>formlyConfig</code> service are very powerful and bring unmatched maintainability to your
+application's forms.</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">form</span> <span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>vm.someForm<span class="pl-pds">"</span></span> <span class="pl-e">ng-submit</span>=<span class="pl-s"><span class="pl-pds">"</span>vm.handleSubmit()<span class="pl-pds">"</span></span>&gt;
+  &lt;<span class="pl-ent">formly</span><span class="pl-e">-form</span> <span class="pl-e">model</span>=<span class="pl-s"><span class="pl-pds">"</span>vm.model<span class="pl-pds">"</span></span> <span class="pl-e">fields</span>=<span class="pl-s"><span class="pl-pds">"</span>vm.fields<span class="pl-pds">"</span></span> <span class="pl-e">options</span>=<span class="pl-s"><span class="pl-pds">"</span>vm.options<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">button</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>submit<span class="pl-pds">"</span></span> <span class="pl-e">ng-disabled</span>=<span class="pl-s"><span class="pl-pds">"</span>vm.someForm.$invalid<span class="pl-pds">"</span></span>&gt;Submit&lt;/<span class="pl-ent">button</span>&gt;
+    &lt;<span class="pl-ent">button</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>button<span class="pl-pds">"</span></span> <span class="pl-e">ng-click</span>=<span class="pl-s"><span class="pl-pds">"</span>vm.options.resetModel()<span class="pl-pds">"</span></span>&gt;Reset&lt;/<span class="pl-ent">button</span>&gt;
+  &lt;/<span class="pl-ent">formly</span><span class="pl-e">-form</span>&gt;
+&lt;/<span class="pl-ent">form</span>&gt;</pre></div>
+
+<p>From there, it's just JavaScript. Allowing for DRY, maintainable, reusable forms.</p>
+
+<h2>
+<a id="learning" class="anchor" href="#learning" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="http://learn.angular-formly.com">Learning</a>
+</h2>
+
+<h3>
+<a id="eggheadio-lessons" class="anchor" href="#eggheadio-lessons" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Egghead.io Lessons</h3>
+
+<p>I'm an <a href="https://egghead.io/">egghead.io</a> author and I have made a handful of lessons available there for free <a href="https://egghead.io/playlists/advanced-angular-forms-with-angular-formly">here</a></p>
+
+<h3>
+<a id="ng-nl-talk" class="anchor" href="#ng-nl-talk" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>NG-NL Talk</h3>
+
+<p><a href="http://youtu.be/o90TMDL3OYc"><img src="other/ng-nl-talk.png" alt="JavaScript Powered Forms"></a></p>
+
+<h3>
+<a id="examples" class="anchor" href="#examples" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Examples</h3>
+
+<p><a href="http://angular-formly.com/">The website</a> is full of tons of examples.</p>
+
+<h3>
+<a id="more" class="anchor" href="#more" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>More</h3>
+
+<p>Find more resources at <a href="http://learn.angular-formly.com">learn.angular-formly.com</a></p>
+
+<h2>
+<a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Documentation</h2>
+
+<p>Find all the documentation at <a href="http://docs.angular-formly.com">docs.angular-formly.com</a>.</p>
+
+<h2>
+<a id="plugins" class="anchor" href="#plugins" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Plugins</h2>
+
+<p>Find all the plugins at <a href="http://docs.angular-formly.com/page/plugins">docs.angular-formly.com/page/plugins</a></p>
+
+<h2>
+<a id="getting-help" class="anchor" href="#getting-help" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Getting Help</h2>
+
+<p>Please don't file an issue unless you feel like you've found a bug or have a feature request. Instead, go to <a href="http://help.angular-formly.com">help.angular-formly.com</a> and follow the instructions.</p>
+
+<h2>
+<a id="roadmap" class="anchor" href="#roadmap" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Roadmap</h2>
+
+<p>See the <a href="https://github.com/formly-js/angular-formly/labels/enhancement">issues labeled enhancement</a></p>
+
+<h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributing</h2>
+
+<p>Please see the <a href="CONTRIBUTING.md">CONTRIBUTING Guidelines</a>.</p>
+
+<p><strong>Note</strong>: This projects adheres to a <a href="CODE_OF_CONDUCT.md">Code of Conduct</a>.</p>
+
+<h2>
+<a id="financial-support" class="anchor" href="#financial-support" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Financial Support</h2>
+
+<p>Some have expressed a desire to contribute financially as a way of expressing gratitude. I appreciate anything you (or
+your company) would be willing to contribute :-) You can support me <a href="https://www.patreon.com/kentcdodds">here</a>. Thanks!</p>
+
+<h2>
+<a id="bookmark-links" class="anchor" href="#bookmark-links" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Bookmark Links</h2>
+
+<p>You can bookmark these :-)</p>
+
+<ul>
+<li><a href="http://help.angular-formly.com">http://help.angular-formly.com</a></li>
+<li><a href="http://question.angular-formly.com">http://question.angular-formly.com</a></li>
+<li><a href="http://issue.angular-formly.com">http://issue.angular-formly.com</a></li>
+<li><a href="http://new-example.angular-formly.com">http://new-example.angular-formly.com</a></li>
+<li><a href="http://egghead.angular-formly.com">http://egghead.angular-formly.com</a></li>
+<li><a href="http://chat.angular-formly.com">http://chat.angular-formly.com</a></li>
+<li><a href="http://mailing-list.angular-formly.com">http://mailing-list.angular-formly.com</a></li>
+<li><a href="http://learn.angular-formly.com">http://learn.angular-formly.com</a></li>
+<li><a href="http://questions.angular-formly.com">http://questions.angular-formly.com</a></li>
+</ul>
+
+<h2>
+<a id="thanks" class="anchor" href="#thanks" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Thanks</h2>
+
+<p>A special thanks to <a href="http://gonimbly.com">Nimbly</a> for creating angular-formly.
+This library is maintained (with love) by me, <a href="https://twitter.com/kentcdodds">Kent C. Dodds</a>.
+Thanks to all <a href="https://github.com/formly-js/angular-formly/graphs/contributors">contributors</a>!</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/YOTOV-LIMITED/angular-formly">Angular-formly</a> is maintained by <a href="https://github.com/YOTOV-LIMITED">YOTOV-LIMITED</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
